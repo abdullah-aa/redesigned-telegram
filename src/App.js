@@ -7,18 +7,24 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Welcome to Dan's List!
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div>
+          <form action='http://localhost:3000/authenticate' method='post'>
+            <div className='loginBox'>
+              <div className='loginCombo'>
+                <label className='loginLabel' for='username'>Username:</label>
+                <input style={{ marginLeft: '0.25rem' }} type='text' id='username' name='username' />
+              </div>
+              <div className='loginCombo'>
+                <label className='loginLabel' for='password'>Password:</label>
+                <input style={{ marginLeft: '0.25rem' }} type='password' id='password' name='password' />
+              </div>
+              <input type='submit' value='Submit' />
+            </div>
+          </form>
+        </div>
       </header>
     </div>
   );
